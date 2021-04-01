@@ -37,10 +37,14 @@ def qolsys_data_received(data:dict):
     else:
         print(data)
     
-def main():
+def main_with_args(args:dict):
+    main(args)
+        
+def main(args:dict={}):
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s: %(levelname)s: %(module)s: %(funcName)s: %(lineno)d: %(message)s')
     logging.debug(("Command line arguments:", sys.argv[1:]))
-    args = get_command_line_args()
+    if len(args) <1:
+        args = get_command_line_args()
 
     #Deal with some arguments that stop execution
     if "help" in args:

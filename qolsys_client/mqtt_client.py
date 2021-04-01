@@ -29,7 +29,3 @@ class mqtt:
             raise Exception("Need a topic to listen to")
         logging.debug("Starting the MQTT subscriber")
         smqtt.callback(cb, topics, hostname=self.broker)
-        #subscribed.callback(cb,)
-        #self.client.subscribe(topic)
-        #self.client.on
-
