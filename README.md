@@ -12,8 +12,11 @@ This package was inspired by a conversation on the Home Assistant forum:
 2. Publish JSON formatted messages to the mqtt topic (qolsys/requests by default):
 
 {"event":"INFO", "token":"blah"}
+
 {"event":"ARM", "arm_type":"stay", "partition_id": 0, "token":"blah"}
+
 {"event":"ARM", "arm_type":"away", "partition_id": 0, "token":"blah"}
+
 {"event":"DISARM", "usercode":"0000", "token":"blah"}
 
 3. Events will publish to the following topics:
